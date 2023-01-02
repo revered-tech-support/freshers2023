@@ -1,0 +1,26 @@
+<a class="action primary" href="<?= $block->getUrl('revered/testimonial/insert'); ?>">Add Record</a>
+<table>
+     <tr>
+          <th>Id</th>
+          <th>Testimonial_title</th>
+          <th>Testimonial_content </th>
+          <th>Testimonial_date</th>
+          
+     </tr>
+ 
+     <?php
+          $collection = $block->getCollection();
+          foreach($collection as $item){
+     ?>
+     
+     <tr>
+          <td><?php echo $item->getData('post_id'); ?></td>
+          <td><?php echo $item->getData('testimonial_title'); ?></td>
+          <td><?php echo $item->getData('testimonial_content'); ?></td>
+          <td><?php echo $item->getData('testimonial_date'); ?></td>
+         <td> <a class="action primary" href="<?= $block->getUrl('revered/testimonial/edit').'post_id/'.$item->getData('post_id'); ?>">Edit</a></td>
+         <td> <a class="action primary" href="<?= $block->getUrl('revered/testimonial/delete').'post_id/'.$item->getData('post_id'); ?>">delete</a></td>
+     </tr>
+        
+     <?php } ?>
+</table>

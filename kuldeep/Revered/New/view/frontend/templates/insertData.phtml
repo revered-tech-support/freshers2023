@@ -1,0 +1,23 @@
+<h2 align="center"> Testimonial List</h2>
+
+<form action="<?php echo $this->getUrl('revered/testimonial/save', ['_secure' => true]);?>" method="post">
+
+    <table align="center">
+        <tr>
+        <label >Testimonial Title:</label><br>      
+            <input type="text"  name="testimonial_title" ><br><br>
+            
+        </tr>
+        <tr>
+        <label >Testimonial Content:</label><br>      
+            <input type="text"  name="testimonial_content" ><br><br>
+            
+        </tr>
+          <tr>
+          <label >Testimonial Date:</label><br>      
+            <input type="date"  name="testimonial_date" ><br><br>
+        </tr>
+            <td ><input type="submit" value="insert" name="submit"> </td>
+        </tr>
+    </table>
+</form>
