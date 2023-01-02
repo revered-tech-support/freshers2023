@@ -1,0 +1,22 @@
+
+<h2 align="center">simple form</h2>
+
+<form action="<?php echo $this->getUrl('revered/services/save', ['_secure' => true]);?>" method="post">
+
+    <table align="center">
+        <tr>
+            <td>service_name:</td>
+            <td><input type="text" name="service_name"> </td>
+        </tr>
+        <tr>
+            <td>service_type:</td>
+            <td><input type="text" name="service_type"> </td>
+        </tr>
+          <tr>
+            <td>service_date:</td>
+            <td><input type="date" name="service_date"> </td>
+        </tr>
+            <td colspan="4" align="center"><input type="submit" value="insert" name="submit"> </td>
+        </tr>
+    </table>
+</form>

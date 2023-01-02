@@ -1,0 +1,33 @@
+<?php
+    $collection = $block->getEditData();
+?>
+<div id="custom-form">
+   <form class="contact custom" 
+         action="<?php echo $this->getUrl('revered/services/save', ['_secure' => true]);?>"
+         id="custom-form"
+         method="post"
+         data-hasrequired="<?php  echo __('* Required Fields') ?>"
+         data-mage-init='{"validation":{}}'>
+          <input type="hidden" name="id" id="id" value="<?= $collection['id']; ?> 
+ 
+         <h2 align="center">edit form</h2>
+    <table align="center">
+        <tr>
+            <td>service_name:</td>
+            <td><input name="service_name" id="service_name" title="<?php  echo __('Service_name') ?>" value="<?= $collection['service_name']; ?>" class="input-text" type="text" data-validate="{required:true}"/>
+                <!-- <input type="text" name="service_name" > </td> -->
+        </tr>
+        <tr>
+            <td>service_type:</td>
+            <td><input name="service_type" id="service_type" title="<?php  echo __('service_type') ?>" value="<?= $collection['service_type']; ?>" class="input-text" type="text" data-validate="{required:true}"/>
+            <!-- <td><input type="text" name="service_type"> </td> -->
+        </tr>
+          <tr>
+            <td>service_date:</td>
+            <td><input name="service_date" id="service_date" title="<?php  echo __('service_date') ?>" value="<?= $collection['service_date']; ?>" class="input-text" type="text" data-validate="{required:true}"/>
+            <!-- <td><input type="date" name="service_date"> </td> -->
+        </tr>
+            <td colspan="4" align="center"><input type="submit" value="edit" name="submit"> </td>
+        </tr>
+    </table>
+</form>

@@ -1,0 +1,46 @@
+<h1>This is my table</h1>
+
+
+<!-- <p>
+    <?php 
+    // echo $block->saywelcome();
+
+    // $collection = $block->getCollection();
+    
+  ?>  
+
+</p> -->
+
+	
+<table>
+     <tr>
+          <th>Id</th>
+          <th>Service_name</th>
+          <th>Service_type </th>
+          <th>Service_date</th>
+          
+<a class="action primary" href="<?= $block->getUrl('revered/services/insert'); ?>">Add Record</a>
+
+     </tr>
+     
+ 
+     <?php
+          $collection = $block->getCollection();
+          foreach($collection as $item){
+     ?>
+     <tr>
+          <td><?php echo $item->getData('id'); ?></td>
+          <td><?php echo $item->getData('service_name'); ?></td>
+          <td><?php echo $item->getData('service_type'); ?></td>
+          <td><?php echo $item->getData('service_date'); ?></td>
+          <td> <a class="action primary" href="<?= $block->getUrl('revered/services/edit').'id/'.$item->getId(); ?>">Edit</a></td>
+          <td> <a class="action primary" href="<?= $block->getUrl('revered/services/del').'id/'.$item->getId(); ?>">Delete</a></td>
+          
+          
+          
+        
+          
+     </tr>
+     <?php } ?>
+</table>
+
