@@ -1,0 +1,30 @@
+<a class="action primary" href="<?= $block->getUrl('reverd/portfolio/insertform'); ?>">Add Record</a>
+  
+<pre>        
+<table>
+     <tr>
+          <th>Id</th>
+          <th>Project_Name</th>
+          <th>Project_Type </th>
+          <th>Project_Date</th>
+     </tr>
+ 
+     <?php
+          $collection = $block->getCollection();
+          foreach($collection as $item){
+     ?>
+     <tr>
+          <td><?php  echo $item->getData('id'); ?></td>
+          <td><?php  echo $item->getData('project_name'); ?></td>
+          <td><?php  echo $item->getData('project_type'); ?></td>
+          <td><?php  echo $item->getData('project_date'); ?></td>
+          <td>
+            <a href="<?= $block->getUrl('reverd/portfolio/edit').'id/'.$item->getId(); ?>" class="action primary">Edit</a>
+        </td>
+        <td>
+            <a href="<?= $block->getUrl('reverd/portfolio/delete').'?id='.$item->getId(); ?>" class="action primary">Delete</a>
+        </td>
+     </tr>
+     <?php } ?>
+</table>
+ </pre>

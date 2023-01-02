@@ -1,0 +1,42 @@
+<?php //$collection = $block->setData();  ?>
+<div id="custom-form">
+   <form class="contact custom" 
+         action="<?php echo $this->getUrl('reverd/portfolio/save', ['_secure' => true]);?>"
+         id="custom-form"
+         method="post"
+         data-hasrequired="<?php  echo __('* Required Fields') ?>"
+         data-mage-init='{"validation":{}}'>
+ 
+        <fieldset class="fieldset">
+            <legend class="legend"><span><?php  echo __("Registration Form") ?></span></legend><br />
+            <div class="field project_name required">
+                <label class="label" for="name"><span><?php  echo __('Project_Name') ?></span></label>
+                <div class="control">
+                    <input name="project_name" id="project_name" title="<?php  echo __('Project_Name') ?>" class="input-text" type="text" data-validate="{required:true}"/>
+                </div>
+            </div>
+            <div class="field project_type required">
+                <label class="label" ><span><?php  echo __('Project_Type') ?></span></label>
+                <div class="control">
+                    <input name="project_type" id="project_type" title="<?php  echo __('Project_Type') ?>" class="input-text" type="text" data-validate="{required:true}"/>
+                </div>
+            </div>
+            <div class="field project_date">
+                <label class="label" ><span><?php  echo __('Project_Date') ?></span></label>
+                <div class="control">
+                    <input name="project_date" id="project_date" title="<?php  echo __('Project_Date') ?>" class="input-text" type="date"/>
+                </div>
+            </div>
+           
+        </fieldset>
+    
+        <div class="actions-toolbar">
+            <div class="primary">
+                <input type="hidden" name="editId" id="editId" value="" />
+                <button type="submit" title="<?php  echo __('Submit') ?>" class="action submit primary" id="custom_btn">
+                    <span><?php  echo __('Submit') ?></span>
+                </button>
+            </div>
+        </div>
+   </form>
+</div>
