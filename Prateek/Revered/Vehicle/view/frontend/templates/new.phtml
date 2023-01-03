@@ -1,0 +1,44 @@
+<h1>This is my list of vehicle</h1>
+
+
+<!-- <p>
+    <?php 
+    // echo $block->saywelcome();
+
+    // $collection = $block->getCollection();
+    
+  ?>  
+
+</p> -->
+
+	
+<table>
+     <tr>
+          <th>Id</th>
+          <th>Vehicle_type </th>
+          <th>Registration_date</th>
+          
+<a class="action primary" href="<?= $block->getUrl('vehicle/revered/addvehicle'); ?>">Add Vehicle</a>
+
+     </tr>
+     
+ 
+     <?php
+          $collection = $block->getCollection();
+          foreach($collection as $item){
+     ?>
+     <tr>
+          <td><?php echo $item->getData('id'); ?></td>
+          <td><?php echo $item->getData('vehicle_type'); ?></td>
+          <td><?php echo $item->getData('registration_date'); ?></td>
+          <td> <a class="action primary" href="<?= $block->getUrl('vehicle/revered/edit').'id/'.$item->getId(); ?>">Update</a></td>
+          <td> <a class="action primary" href="<?= $block->getUrl('vehicle/revered/del').'id/'.$item->getId(); ?>">Delete</a></td>
+          
+          
+          
+        
+          
+     </tr>
+     <?php } ?>
+</table>
+

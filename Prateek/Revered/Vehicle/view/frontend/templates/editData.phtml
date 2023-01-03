@@ -1,0 +1,29 @@
+<?php
+    $collection = $block->getEditData();
+?>
+<div id="custom-form">
+   <form class="contact custom" 
+         action="<?php echo $this->getUrl('vehicle/revered/save', ['_secure' => true]);?>"
+         id="custom-form"
+         method="post"
+         data-hasrequired="<?php  echo __('* Required Fields') ?>"
+         data-mage-init='{"validation":{}}'>
+          <input type="hidden" name="id" id="id" value="<?= $collection['id']; ?> 
+ 
+         <h2 align="center">update form</h2>
+    <table align="center">
+       
+        <tr>
+            <td>vehicle_type:</td>
+            <td><input name="vehicle_type" id="vehicle_type" title="<?php  echo __('vehicle_type') ?>" value="<?= $collection['vehicle_type']; ?>" class="input-text" type="text" data-validate="{required:true}"/>
+            
+        </tr>
+          <tr>
+            <td>registration_date:</td>
+            <td><input name="registration_date" id="registration_date" title="<?php  echo __('registration_date') ?>" value="<?= $collection['registration_date']; ?>" class="input-text" type="text" data-validate="{required:true}"/>
+            
+        </tr>
+            <td colspan="4" align="center"><input type="submit" value="edit" name="submit"> </td>
+        </tr>
+    </table>
+</form>
