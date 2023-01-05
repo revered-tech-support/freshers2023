@@ -1,0 +1,41 @@
+<?php
+    $collection = $block->getEditData();
+?>
+<div id="custom-form">
+   <form class="contact custom" 
+         action="<?php echo $this->getUrl('devices/revered/save', ['_secure' => true]);?>"
+         id="custom-form"
+         method="post"
+         data-hasrequired="<?php  echo __('* Required Fields') ?>"
+         data-mage-init='{"validation":{}}'>
+ 
+       <input type="hidden" name="id" id="id" value="<?= $collection['id']; ?>" />
+ 
+        <fieldset class="fieldset">
+            <legend class="legend"><span><?php  echo __("Update data here") ?></span></legend><br />
+           
+            <div class="field name required">
+                <label class="label" for="name"><span><?php  echo __('Equipment_Name') ?></span></label>
+                <div class="control">
+                    <input name="equipment_name" id="equipment_name" title="<?php  echo __('Equipment_Name') ?>" value="<?= $collection['equipment_name']; ?>" class="input-text" type="text" data-validate="{required:true}"/>
+                </div>
+            </div>
+
+            <div class="field project_type required">
+                <label class="label"><span><?php  echo __('Equipment_Manufacturing_Date') ?></span></label>
+                <div class="control">
+                    <input name="equipment_manufacturing_date" id="equipment_manufacturing_date" title="<?php  echo __('Equipment_Manufacturing_Date') ?>" value="<?= $collection['equipment_manufacturing_date']; ?>" class="input-text" type="text" data-validate="{required:true}"/>
+                </div>
+            </div>
+            
+        </fieldset>
+        <div class="actions-toolbar">
+            <div class="primary">
+                <input type="hidden" name="editId" id="editId" value="Update" />
+                <button type="submit" title="<?php  echo __('Submit') ?>" class="action submit primary" id="custom_btn">
+                    <span><?php  echo __('Update') ?></span>
+                </button>
+            </div>
+        </div>
+   </form>
+</div>

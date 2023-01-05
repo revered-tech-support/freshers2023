@@ -1,0 +1,29 @@
+<a class="action primary" href="<?= $block->getUrl('devices/revered/addequipment'); ?>">Add Equipment</a>
+  
+<pre>        
+<table>
+     <tr>
+          <th>Id</th>
+          <th>Equipment_Name</th>
+          <th>Equipment_Manufacturing_Date</th>
+     </tr>
+ 
+     <?php
+          $collection = $block->getCollection();
+          foreach($collection as $item){
+     ?>
+     <tr>
+          <td><?php  echo $item->getData('id'); ?></td>
+          <td><?php  echo $item->getData('equipment_name'); ?></td>
+          <td><?php  echo $item->getData('equipment_manufacturing_date'); ?></td>
+     
+          <td>
+            <a href="<?= $block->getUrl('devices/revered/edit').'id/'.$item->getId(); ?>" class="action primary">Edit</a>
+        </td>
+        <td>
+            <a href="<?= $block->getUrl('devices/revered/delete').'?id='.$item->getId(); ?>" class="action primary">Delete</a>
+        </td>
+     </tr>
+     <?php } ?>
+</table>
+ </pre>
