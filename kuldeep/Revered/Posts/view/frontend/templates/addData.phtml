@@ -1,0 +1,18 @@
+<h2 align="center"> Testimonial List</h2>
+
+<form action="<?php echo $this->getUrl('blog/revered/save', ['_secure' => true]);?>" method="post">
+
+    <table align="center">
+        <tr>
+        <label >Post Title:</label><br>      
+            <input type="text"  name="post_title" ><br><br>
+            
+        </tr>
+          <tr>
+          <label >Publish Date:</label><br>      
+            <input type="date"  name="publish_date" ><br><br>
+        </tr>
+            <td ><input type="submit" value="insert" name="submit"> </td>
+        </tr>
+    </table>
+</form>

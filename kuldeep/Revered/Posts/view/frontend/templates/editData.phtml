@@ -1,0 +1,21 @@
+<?php
+    $collection = $block->getEditData();
+?>
+<h2 align="center"> Testimonial Edit</h2>
+
+<form action="<?php echo $this->getUrl('blog/revered/save', ['_secure' => true]);?>" method="post">
+<input type="hidden" name="id" id="id" value="<?= $collection['id']; ?>" />
+    <table align="center">
+        <tr>
+        <label >Post Title:</label><br>      
+            <input type="text"  name="post_title" value="<?= $collection['post_title']; ?>"><br><br>
+                
+        </tr>
+          <tr>
+          <label >Publish Date:</label><br>      
+            <input type="date"  name="publish_date" value="<?= $collection['publish_date']; ?>"><br><br>
+        </tr>
+            <td ><input type="submit" value="update" name="submit"> </td>
+        </tr>
+    </table>
+</form>

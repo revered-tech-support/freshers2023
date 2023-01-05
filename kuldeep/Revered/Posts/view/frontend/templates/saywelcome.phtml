@@ -1,0 +1,24 @@
+<a class="action primary" href="<?= $block->getUrl('blog/revered/addpost'); ?>">Add Record</a>	
+<table>
+     <tr>
+          <th>Id</th>
+          <th>Post_title</th>
+          <th>Publish_date </th>
+          
+          
+     </tr>
+ 
+     <?php
+          $collection = $block->getCollection();
+          foreach($collection as $item){
+     ?>
+     <tr>
+          <td><?php echo $item->getData('id'); ?></td>
+          <td><?php echo $item->getData('post_title'); ?></td>
+          <td><?php echo $item->getData('publish_date'); ?></td>
+          <td> <a class="action primary" href="<?= $block->getUrl('blog/revered/edit').'id/'.$item->getData('id'); ?>">Edit</a></td>
+         <td> <a class="action primary" href="<?= $block->getUrl('blog/revered/delete').'id/'.$item->getData('id'); ?>">delete</a></td>
+          
+     </tr>
+     <?php } ?>
+</table>
