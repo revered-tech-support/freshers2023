@@ -1,0 +1,14 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <!-- <type name="Magento\Checkout\Model\Cart">
+        <plugin name="PluginCart" type="My\Plugin\Model\Cart" sortOrder="1" disabled="false"  />
+    </type> -->
+
+     <type name="Magento\Catalog\Model\Product">
+        <plugin name="cache_price" type="My\Plugin\Model\Product" sortOrder="1" />
+    </type>
+
+   <!-- <type name="Magento\Checkout\Model\Cart">
+        <plugin name="aroundAddtoCart" type="My\Plugin\Model\Cart" sortOrder="1" disabled="false"  />
+    </type> -->
+
+</config>
