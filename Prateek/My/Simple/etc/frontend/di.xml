@@ -1,0 +1,32 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+
+  <!-- <preference for="My\Simple\NotMagento\PencilInterface" 
+                type="My\Simple\NotMagento\BigPencil" />    -->
+               
+ <!-- <preference    for="Magento\Catalog\Api\ProductRepositoryInterface" 
+                type="My\Simple\Model\CustomImplementation" />  -->
+  <preference    for="My\Simple\Api\PencilInterface" 
+                type="My\Simple\Model\Pencil" />  
+  <preference    for="My\Simple\Api\Color" 
+                type="My\Simple\Model\Yellow" />  
+ <preference    for="My\Simple\Api\Size" 
+                type="My\Simple\Model\Normal" />  
+
+ <preference    for="My\Simple\Api\Brightness" 
+                type="My\Simple\Model\Medium" /> 
+<!-- 
+  <type name ="My\Simple\Model\Pencil">
+  <arguments>
+  <argument name = "color" xsi:type="object">My\Simple\Model\Red</argument>
+   <argument name = "size" xsi:type="object">My\Simple\Model\Big</argument>
+  </arguments>
+  </type>   -->
+
+    <!-- <type name ="My\Simple\Model\Student">
+  <arguments>
+  <argument name = "name" xsi:type="string">Bob</argument>
+   <argument name = "age" xsi:type="number">32</argument>
+  </arguments>
+  </type>   -->
+
+</config>
