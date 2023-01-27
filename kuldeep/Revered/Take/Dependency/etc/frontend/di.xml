@@ -1,0 +1,45 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+
+  <!-- <preference for="Take\Dependency\NotMagento\PencilInterface" 
+                type="Take\Dependency\NotMagento\BigPencil" />  -->
+
+    <!-- <preference for="Magento\Catalog\Api\ProductRepositoryInterface"
+                type="Take\Dependency\Model\CustomImplementation" /> -->
+    <preference for="Take\Dependency\Api\PencilInterface" 
+                type="Take\Dependency\Model\Pencil" />
+    <preference for="Take\Dependency\Api\Color" 
+                type="Take\Dependency\Model\Yellow" />
+    <preference for="Take\Dependency\Api\Size" 
+                type="Take\Dependency\Model\Normal" />
+    <preference for="Take\Dependency\Api\Brightness" 
+                type="Take\Dependency\Model\Medium" />
+
+    
+
+    <virtualType name="virtualType" type="Take\Dependency\Model\Yellow">
+        <arguments>
+            <argument name="brightness" xsi:type="object">Take\Dependency\Model\High </argument>
+        </arguments>
+    </virtualType>
+
+
+    <type name="Take\Dependency\Model\Pencil">
+      <arguments>
+                <argument name="color" xsi:type="object">Take\Dependency\Model\Red</argument>
+                <argument name="size" xsi:type="object">Take\Dependency\Model\Big </argument>
+      </arguments>
+    </type>
+
+
+    <type name="Take\Dependency\Model\Student">
+      <arguments>
+        <argument name="name" xsi:type="string">kumawat</argument>
+        <argument name="age" xsi:type="number">28</argument>
+
+        <argument name="scores" xsi:type="array">
+            <item name="maths" xsi:type="number">78</item>
+            <item name="programming" xsi:type="number">98</item>
+        </argument>
+      </arguments>
+    </type>
+</config>
