@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+/**
+* Copyright © Magento. All rights reserved.
+86
+Fundamentals of Magento 2 Development Part 1 v2.3 Exercises & Solutions Guide
+© 2020 Magento, Inc.Unit 6. AdminHTML
+* See COPYING.txt for license details.
+*/
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd"
+>
+<body>
+<referenceContainer name="content">
+<block class="Magento\Framework\View\Element\Template" name="new.page.content"
+template="Reveredtech_AdminPage::index.phtml"/>
+</referenceContainer>
+</body>
+</page>
+
+
+<!-- <?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <referenceContainer name="content">
+        <block class="Revered\New\Block\Display" name="old" template="Revered_New::saywelcome.phtml" cacheable="false" />
+    </referenceContainer>
+</page> -->
