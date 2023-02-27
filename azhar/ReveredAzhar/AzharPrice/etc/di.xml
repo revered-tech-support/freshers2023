@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="reveredazhar_azharprice_hideprice_listing_data_source" xsi:type="string">ReveredAzhar\AzharPrice\Model\ResourceModel\HidePrice\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="ReveredAzharAzharPriceHidePriceDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+        <arguments>
+            <argument name="collection" xsi:type="object" shared="false">ReveredAzhar\AzharPrice\Model\ResourceModel\HidePrice\Collection</argument>
+            <argument name="filterPool" xsi:type="object" shared="false">ReveredAzharAzharPriceHidePriceDataProvider</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="ReveredAzhar\AzharPrice\Model\ResourceModel\HidePrice\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">hideprice_request</argument>
+            <argument name="resourceModel" xsi:type="string">ReveredAzhar\AzharPrice\Model\ResourceModel\HidePrice</argument>
+        </arguments>
+    </virtualType>
+</config>

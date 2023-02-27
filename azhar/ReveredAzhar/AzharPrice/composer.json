@@ -1,0 +1,25 @@
+{
+  "name": "ReveredAzhar/module-callforprice",
+  "description": "Hide price",
+  "type": "magento2-module",
+  "license": [
+    "OSL-3.0",
+    "AFL-3.0"
+  ],
+  "version": "1.0.2",
+  "authors": [
+    {
+      "name": "ReveredAzhar",
+      "email": "info@adorncommerce.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "ReveredAzhar\\AzharPrice\\": ""
+    },
+    "files": [
+      "registration.php"
+    ]
+  }
+}
