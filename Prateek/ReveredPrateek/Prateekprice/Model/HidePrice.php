@@ -4,7 +4,7 @@ namespace ReveredPrateek\Prateekprice\Model;
 use Magento\Framework\DataObject\IdentityInterface; 
 
 
-class HidePrice extends \Magento\Framework\Model\AbstractModel implements \ReveredPrateek\Prateekprice\Api\Data\HidepriceInterface, IdentityInterface
+class HidePrice extends \Magento\Framework\Model\AbstractModel implements  IdentityInterface
 {
     const STATUS_NEW = 1;
 

@@ -1,20 +1,13 @@
 <?php
-/**
- * Copyright © 2016 Magento. All rights reserved.
- * See COPYING.txt for license details.
- */
+
 
 use Magento\Framework\App\Action\Action;
 
-// @codingStandardsIgnoreFile
+
 
 ?>
 <?php
-/**
- * Product list template
- *
- * @var $block \Magento\Catalog\Block\Product\ListProduct
- */
+
 ?>
 <?php
 $_productCollection = $block->getLoadedProductCollection();
@@ -297,7 +290,9 @@ if ($enableLadyLoading) {
                                         </a>
                                     </div>
                                     <?php echo $block->getReviewsSummaryHtml($_product, $templateType); ?>
-                                    <?php if ($_product->isSaleable() && !$this->helper('Adorncommerce\CallForPrice\Helper\Data')->isEnable($_product->getData('call_for_price_active'))): ?>
+
+                                    
+                                    <?php if ($_product->isSaleable() && !$this->helper('ReveredPrateek\Prateekprice\Helper\Data')->isEnable($_product->getData('hide_price_active'))): ?>
 		                    <?php echo $block->getProductPrice($_product) ?>
 	                        <?php endif; ?>
                                     <?php echo $block->getProductDetailsHtml($_product); ?>
@@ -498,7 +493,7 @@ if ($enableLadyLoading) {
                                         echo $_helper->productAttribute($_product, $_product->getShortDescription(), 'short_description') ?>
                                     </div>
 
-                                    <?php if ($_product->isSaleable() && !$this->helper('Adorncommerce\CallForPrice\Helper\Data')->isEnable($_product->getData('call_for_price_active'))): ?>
+                                     <?php if ($_product->isSaleable() && !$this->helper('ReveredPrateek\Prateekprice\Helper\Data')->isEnable($_product->getData('hide_price_active'))): ?>
 		                    <?php echo $block->getProductPrice($_product) ?>
 	                    <?php endif; ?>
                                     <?php echo $block->getProductDetailsHtml($_product); ?>
