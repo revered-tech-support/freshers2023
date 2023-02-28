@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="reveredkuldeep_kuldeepPrice_hideprice_listing_data_source" xsi:type="string">Reveredkuldeep\KuldeepPrice\Model\ResourceModel\HidePrice\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="ReveredkuldeepKuldeepPriceDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+        <arguments>
+            <argument name="collection" xsi:type="object" shared="false">Reveredkuldeep\KuldeepPrice\Model\ResourceModel\CallForPrice\Collection</argument>
+            <argument name="filterPool" xsi:type="object" shared="false">ReveredkuldeepKuldeepPriceDataProvider</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Reveredkuldeep\KuldeepPrice\Model\ResourceModel\HidePrice\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">hideprice_request</argument>
+            <argument name="resourceModel" xsi:type="string">Reveredkuldeep\KuldeepPrice\Model\ResourceModel\HidePrice</argument>
+        </arguments>
+    </virtualType>
+</config>
