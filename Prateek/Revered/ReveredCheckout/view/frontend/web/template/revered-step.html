@@ -1,0 +1,28 @@
+<li id="revered-step" data-bind="fadeVisible: isVisible">
+    <div class="step-title" data-bind="i18n: 'Revered Step'" data-role="title"></div>
+    <div id="checkout-step-title" class="step-content" data-role="content">
+        <form data-bind="submit: navigateToNextStep" novalidate="novalidate">
+
+            <div class="field" name="revered.prateek-field">
+
+                <label class="label" for="prateek-field">
+                    <span>Prateek field</span>
+                </label>
+
+                <div class="control">
+                     <input class="input-text" type="text" data-bind="
+    value: form.prateekField,
+    valueUpdate: 'keyup'" name="prateek-field" placeholder="Enter something" id="prateek-field">
+                </div>
+            </div>
+
+            <div class="actions-toolbar">
+                <div class="primary">
+                    <button data-role="opc-continue" type="submit" class="button action continue primary">
+                        <span><!-- ko i18n: 'Next'--><!-- /ko --></span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</li> 
