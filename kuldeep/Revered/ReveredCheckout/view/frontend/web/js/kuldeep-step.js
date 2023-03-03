@@ -14,7 +14,7 @@ define(
         'use strict';
         return Component.extend({
             defaults: {
-                template: 'Revereds_ReveredCheckout/kuldeep-step',
+                template: 'Revered_ReveredCheckout/kuldeep-step',
                 form: {'kuldeepField': ''}
             },
             initialize: function () {
@@ -36,7 +36,7 @@ define(
             },
             navigateToNextStep: function () {
                 console.log('Value of kuldeep field: ' + this.form.kuldeepField());
-                //$.post("/examplestepcheckout/ajax/post", { exampleField: this.form.exampleField() } );
+                
                 stepNavigator.next();
             }
         });

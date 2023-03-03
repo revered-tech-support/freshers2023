@@ -9,7 +9,7 @@
                                 <item name="steps" xsi:type="array">
                                     <item name="children" xsi:type="array">
                                         <item name="custom-step" xsi:type="array">
-                                            <item name="component" xsi:type="string">Revereds_ReveredCheckout/js/kuldeep-step</item>
+                                            <item name="component" xsi:type="string">Revered_ReveredCheckout/js/kuldeep-step</item>
                                             <item name="sortOrder" xsi:type="string">2</item>
                                         </item>
                                     </item>
