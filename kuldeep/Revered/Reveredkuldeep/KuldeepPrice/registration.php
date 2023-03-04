@@ -1,9 +1,10 @@
 <?php
 /**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
+ * Copyright © 2018 Extcommerce. All rights reserved.
  */
 
-use Magento\Framework\Component\ComponentRegistrar;
-
-ComponentRegistrar::register(ComponentRegistrar::MODULE, 'Reveredkuldeep_KuldeepPrice', __DIR__);
+\Magento\Framework\Component\ComponentRegistrar::register(
+    \Magento\Framework\Component\ComponentRegistrar::MODULE,
+    'Reveredkuldeep_KuldeepPrice',
+    __DIR__
+);

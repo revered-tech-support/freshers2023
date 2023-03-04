@@ -39,7 +39,7 @@ class FinalPriceBox extends \Magento\Catalog\Pricing\Render\FinalPriceBox
 
         if($current_product)
         {
-            if($this->helperData->isEnable($current_product->getData('hide_price_active'))){
+            if($this->helperData->isEnable($current_product->getData('call_for_price_active'))){
                 $result = '';
             }else{
                 $result = parent::wrapResult($html);

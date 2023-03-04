@@ -1,6 +1,6 @@
 <?php
 
-namespace Reveredkuldeep\KuldeepPrice\Model\ResourceModel\HidePrice\Grid;
+namespace Reveredkuldeep\KuldeepPrice\Model\ResourceModel\CallForPrice\Grid;
 
 use Magento\Framework\Api\SearchCriteriaInterface;
 use Magento\Framework\Api\Search\SearchResultInterface;
@@ -11,13 +11,10 @@ use Magento\Framework\Event\ManagerInterface as EventManagerInterface;
 use Magento\Framework\Model\ResourceModel\Db\AbstractDb;
 use Magento\Framework\Api\Search\AggregationInterface;
 use Psr\Log\LoggerInterface;
-use Reveredkuldeep\KuldeepPrice\Model\ResourceModel\HidePrice\Collection as HidePriceCollection;
+use Reveredkuldeep\KuldeepPrice\Model\ResourceModel\CallForPrice\Collection as CallForPriceCollection;
 
-/**
- * Class Collection
- * @package Adorncommerce\CallForPrice\Model\ResourceModel\CallForPrice\Grid
- */
-class Collection extends HidePriceCollection implements SearchResultInterface
+
+class Collection extends CallForPriceCollection implements SearchResultInterface
 {
     /**
      * Aggregations

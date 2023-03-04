@@ -9,9 +9,9 @@ class Status implements \Magento\Framework\Data\OptionSourceInterface
     protected $_grid;
 
     
-    public function __construct(\Reveredkuldeep\KuldeepPrice\Model\HidePrice $hidePrice)
+    public function __construct(\Reveredkuldeep\KuldeepPrice\Model\CallForPrice $callForPrice)
     {
-        $this->_grid = $hidePrice;
+        $this->_grid = $callForPrice;
     }
 
     /**

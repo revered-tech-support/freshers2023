@@ -1,6 +1,6 @@
 <?php
 
-namespace Reveredkuldeep\KuldeepPrice\Model\ResourceModel\HidePrice;
+namespace Reveredkuldeep\KuldeepPrice\Model\ResourceModel\CallForPrice;
 
 class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection
 {
@@ -9,15 +9,7 @@ class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\Ab
      */
     protected $_idFieldName = 'id';
 
-    /**
-     * Collection constructor.
-     * @param \Magento\Framework\Data\Collection\EntityFactory $entityFactory
-     * @param \Psr\Log\LoggerInterface $logger
-     * @param \Magento\Framework\Data\Collection\Db\FetchStrategyInterface $fetchStrategy
-     * @param \Magento\Framework\Event\ManagerInterface $eventManager
-     * @param \Magento\Framework\DB\Adapter\AdapterInterface|null $connection
-     * @param \Magento\Framework\Model\ResourceModel\Db\AbstractDb|null $resource
-     */
+    
     public function __construct(
         \Magento\Framework\Data\Collection\EntityFactory $entityFactory,
         \Psr\Log\LoggerInterface $logger,
@@ -32,7 +24,7 @@ class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\Ab
 
     protected function _construct()
     {
-        $this->_init('Reveredkuldeep\KuldeepPrice\Model\HidePrice', 'Reveredkuldeep\KuldeepPrice\Model\ResourceModel\HidePrice');
+        $this->_init('Reveredkuldeep\KuldeepPrice\Model\CallForPrice', 'Reveredkuldeep\KuldeepPrice\Model\ResourceModel\CallForPrice');
     }
 
 }

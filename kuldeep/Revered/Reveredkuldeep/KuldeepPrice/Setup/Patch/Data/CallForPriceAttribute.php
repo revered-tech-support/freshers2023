@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
 
 namespace Reveredkuldeep\KuldeepPrice\Setup\Patch\Data;
 
@@ -13,7 +16,7 @@ use Magento\Framework\Setup\Patch\PatchRevertableInterface;
 use Psr\Log\LoggerInterface;
 
 
-class HidePriceAttribute implements DataPatchInterface, PatchRevertableInterface
+class CallForPriceAttribute implements DataPatchInterface, PatchRevertableInterface
 {
     /**
      * @var ModuleDataSetupInterface
@@ -73,7 +76,7 @@ class HidePriceAttribute implements DataPatchInterface, PatchRevertableInterface
     public function apply()
     {
         $this->moduleDataSetup->getConnection()->startSetup();
-        $this->addHidePriceAttribute();
+        $this->addCallForPriceAttribute();
         $this->moduleDataSetup->getConnection()->endSetup();
     }
 
@@ -82,18 +85,18 @@ class HidePriceAttribute implements DataPatchInterface, PatchRevertableInterface
      * @throws \Magento\Framework\Exception\LocalizedException
      * @throws \Zend_Validate_Exception
      */
-    public function addHidePriceAttribute()
+    public function addCallForPriceAttribute()
     {
         $eavSetup = $this->eavSetupFactory->create();
-        
+        /*$eavSetup->removeAttribute(\Magento\Catalog\Model\Product::ENTITY, 'call_for_price_active');*/
         $eavSetup->addAttribute(
-            \Magento\Catalog\Model\Product::ENTITY, 'hide_price_active',
+            \Magento\Catalog\Model\Product::ENTITY, 'call_for_price_active',
             [
                 'group' => 'Product Details',
                 'type' => 'int',
                 'backend' => '',
                 'frontend' => '',
-                'label' => 'Hide Price',
+                'label' => 'Hide Add TO Card and Price',
                 'input' => 'boolean',
                 'class' => '',
                 'source' => 'Magento\Eav\Model\Entity\Attribute\Source\Boolean',
