@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="reveredazhar_azharprice_azharprice_listing_data_source" xsi:type="string">Reveredazhar\AzharPrice\Model\ResourceModel\CallForPrice\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="ReveredazharAzharPriceDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+        <arguments>
+            <argument name="collection" xsi:type="object" shared="false">Reveredazhar\AzharPrice\Model\ResourceModel\CallForPrice\Collection</argument>
+            <argument name="filterPool" xsi:type="object" shared="false">ReveredazharAzharPriceDataProvider</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Reveredazhar\AzharPrice\Model\ResourceModel\CallForPrice\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">callforprice_request</argument>
+            <argument name="resourceModel" xsi:type="string">Reveredazhar\AzharPrice\Model\ResourceModel\CallForPrice</argument>
+        </arguments>
+    </virtualType>
+</config>
