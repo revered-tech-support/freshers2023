@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Revered_Shippingbar::free_shipping_bar_management"
+             title="Free Shipping Bar"
+             translate="title"
+             action="sparsh_free_shipping_bar/entity"
+             module="Revered_Shippingbar"
+             sortOrder="50"
+             resource="Revered_Shippingbar::free_shipping_bar_management"
+             dependsOnConfig="sparsh_free_shipping_bar/general/enable"/>
+    </menu>
+</config>
