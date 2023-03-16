@@ -1,0 +1,42 @@
+<?php
+
+
+?>
+<?php if ($block->isEnabled()): ?>
+    <div class="fieldset info">
+        <div class="field field-mobile-number <?= $block->isRequired() ? 'required' : '' ?>">
+            <label for="mobile-number" class="label">
+        <span>
+            <?= $block->escapeHtml(__('Customer Mobile Number')) ?>
+        </span>
+            </label>
+            <div class="control">
+                <?php
+                $_validationClass = $block->getAttributeValidationClass();
+                ?>
+                <input type="text"
+                       name="customer_mobile"
+                       id="customer_mobile"
+                       title="<?= $block->escapeHtmlAttr(__('Mobile Number')) ?>"
+                       class="input-text <?= $_validationClass ?: '' ?>">
+                    </div>
+
+<label for="mobile-number" class="label">
+        <span>
+            <?= $block->escapeHtml(__('Customer Age')) ?>
+        </span>
+            </label>
+            <div class="control">
+                <?php
+                $_validationClass = $block->getAttributeValidationClass();
+                ?>
+                <input type="text"
+                       name="customer_age"
+                       id="customer_age"
+                       title="<?= $block->escapeHtmlAttr(__('Customer Age')) ?>"
+                       class="input-text <?= $_validationClass ?: '' ?>">
+                    </div>
+
+        </div>
+    </div>
+<?php endif; ?>
