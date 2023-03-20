@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Revered_Attributes::attributes"
+             title="Attributes"
+             module="Revered_Attributes"
+             sortOrder="100"
+             parent="Magento_Customer::customer"
+             resource="Revered_Attributes::attributes"/>
+
+        <add id="Revered_Attributes::customer_attributes"
+             title="Customer Attributes"
+             module="Revered_Attributes"
+             sortOrder="5"
+             parent="Revered_Attributes::attributes"
+             action="cam/customer/index/"
+             resource="Revered_Attributes::customer_attributes"/>
+
+        <!-- <add id="Revered_Attributes::address_attributes"
+             title="Customer Address Attributes"
+             module="Revered_Attributes"
+             sortOrder="10"
+             parent="Revered_Attributes::attributes"
+             action="cam/address/index/"
+             resource="Revered_Attributes::address_attributes"/> -->
+
+    </menu>
+</config>
